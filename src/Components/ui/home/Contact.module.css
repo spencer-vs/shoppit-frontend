@@ -1,0 +1,28 @@
+.container {
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.contactBody {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+
+.contactHeader {
+    color: #6050DC;
+    margin-left: 2rem;
+}
+
+.contactSpan {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3.5rem;
+} 
+
+.email {
+    margin-top: 3rem;
+}
