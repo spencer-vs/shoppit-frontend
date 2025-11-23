@@ -10,19 +10,19 @@ const CartSummary = ({cartTotal = 0, tax = 0}) => {
   
     return (
    <div className="col-md-4 align-self-start">
-    <div className="card p-3 shadow-sm w-100" style={{ overflow: "hidden", marginLeft: '20rem'}}>
+    <div className="card p-3 shadow-sm w-100" style={{ overflow: "hidden"}}>
         <div className="card-body">
             <h5 className="card-title">Cart Summary</h5>
             <hr/>
-            <div className="d-flex justify-content-between me-6">
+            <div className="d-flex justify-content-between ">
                 <span>Subtotal:</span>
                 <span>{`$${subTotal}`}</span>
             </div>
-            <div className="d-flex justify-content-between me-6">
+            <div className="d-flex justify-content-between ">
                 <span>Tax</span>
                 <span>{`$${cartTax}`}</span>
             </div>
-            <div className="d-flex justify-content-between mb-3 me-6">
+            <div className="d-flex justify-content-between mb-3">
                 <span>Total</span>
                 <span>{`$${total}`}</span>
             </div>

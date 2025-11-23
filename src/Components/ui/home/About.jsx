@@ -18,7 +18,7 @@ const About = () => {
         <div className={styles.aboutShoppit}> 
         <header className={styles.aboutHeader}>About The Website</header> 
         <p className={styles.aboutBody}>
-            Shoppit is a state of the art e-commerce site, built to provide customers with easy and memorable shopping experience. Complete with the latest products in the market, simple and easy to use authentication features and multiple payment options such as Flutterwave and Paypal, allowing customers to pay with both their credit cards and bank transfers as well as international payment through our Paypal payment gateway. This features provide a seamless shopping experience which can be done with a few clicks of the button right their on your couch.
+            SmartMart is a state of the art e-commerce site, built to provide customers with easy and memorable shopping experience. Complete with the latest products in the market, simple and easy to use authentication features and multiple payment options such as Flutterwave and Paypal, allowing customers to pay with both their credit cards and bank transfers as well as international payment through our Paypal payment gateway. This features provide a seamless shopping experience which can be done with a few clicks of the button right their on your couch.
         </p>
         </div>
         <div className={styles.aboutdev}>

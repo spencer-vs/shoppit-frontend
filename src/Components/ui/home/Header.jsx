@@ -9,7 +9,7 @@ const Header = () => {
                 Welcome To Your Favorite Store
             </h1>
             <p className="leade fw-normal text-white-75 mb-4">
-               Shoppit Make Your Dreams Come True From The Comfort Of Your Couch
+              SmartMart Make Your Dreams Come True From The Comfort Of Your Couch
             </p>
             <a href="#shop" className="btn btn-light btn-lg rounded-pill px-4 py-2">Shop Now</a>
         </div>
