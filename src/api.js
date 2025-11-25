@@ -1,27 +1,3 @@
-// src/api.js
-// import axios from 'axios';
-// import { jwtDecode } from 'jwt-decode';
-
-
-// export const BASE_URL = 'http://127.0.0.1:8001'; ; // EXPORTED
-
-
-// const api = axios.create({
-//   baseURL: "http://127.0.0.1:8001", // or your backend URL
- 
-// });
-// // Automatically attach JWT token
-// api.interceptors.request.use(
-//   (config) => {
-//     const token = localStorage.getItem("access");
-//     if (token) {
-//       config.headers.Authorization = `Bearer ${token}`;
-//     }
-//     return config;
-//   },
-//   (error) => Promise.reject(error)
-// );
-
 
 
 

@@ -56,33 +56,7 @@ const LoginPage = () => {
     });
 }
 
-  // function handleSubmit(e){
-  //   e.preventDefault()
-  //   setLoading(true)
-  //   api.post("/shop/token/", userInfo)
-  //   .then(res => {
-  //     console.log(res.data)
-  //     localStorage.setItem("access", res.data.access)
-  //     localStorage.setItem("refresh", res.data.refresh)
-  //     setUsername("")
-  //     setPassword("")
-  //     setLoading(false)
-  //     setError("")
-
-  //     const from = location.state?.from?.pathname || "/";
-  //     navigate(from, {replace:true})
-  //   })
-
-  //   .catch(err => {
-  //     console.log(err.message)
-  //     setLoading(false)
-  //     setError(err.message)
-  //   })
-
-  // }
-
-
-
+  
   return (
     <div className="login-container my-5">
       <div className="login-card shadow">
