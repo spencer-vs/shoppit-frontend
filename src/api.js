@@ -142,18 +142,33 @@ api.interceptors.request.use(async (config) => {
   return config;
 });
 // FIXED: Use BASE_URL here too!
+// export async function registerUser(formData) {
+//   const response = await fetch(`${BASE_URL}/shop/signup/`, {
+//     method: "POST",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify(formData),
+//   });
+//   // Handle Django might return 400 with error details — don't always assume .json() works
+//   const contentType = response.headers.get("content-type");
+//   if (contentType && contentType.includes("application/json")) {
+//     return await response.json();
+//   }
+//   // If not JSON (e.g. HTML error page), throw text for debugging
+//   throw new Error(await response.text());
+// }
+
 export async function registerUser(formData) {
   const response = await fetch(`${BASE_URL}/shop/signup/`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
   });
-  // Handle Django might return 400 with error details — don't always assume .json() works
-  const contentType = response.headers.get("content-type");
-  if (contentType && contentType.includes("application/json")) {
-    return await response.json();
+  const text = await response.text();
+  try {
+    return JSON.parse(text);
+  } catch (err) {
+    console.error("Signup returned HTML instead of JSON:", text);
+    throw new Error("Backend returned HTML (likely wrong URL or server error)");
   }
-  // If not JSON (e.g. HTML error page), throw text for debugging
-  throw new Error(await response.text());
 }
 export default api;
