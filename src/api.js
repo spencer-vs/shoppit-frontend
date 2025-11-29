@@ -6,6 +6,7 @@
 
 import axios from "axios";
 import { jwtDecode } from 'jwt-decode';
+import { AuthProvider } from "./Components/context/AuthContext";
 
 // export const BASE_URL = 'http://127.0.0.1:8001'; 
 
