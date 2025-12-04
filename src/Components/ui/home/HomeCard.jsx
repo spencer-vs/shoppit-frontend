@@ -10,7 +10,10 @@ const HomeCard = ({product}) => {
    <Link to={`/products/${product.slug}`} className={styles.link}>
    <div className={styles.card}>
     <div className={styles.cardImgWrapper}>
-        <img src={`${BASE_URL}${product.image}`}
+        <img src={ product.image && product.image.startsWith('http')
+      ? product.image
+      : `https://res.cloudinary.com/\( {import.meta.env.VITE_CLOUDINARY_CLOUD_NAME}/image/upload/v1/ \){product.image}`
+  }
         className={styles.cardImgTop}
         alt="Product Image"
         />
