@@ -89,9 +89,7 @@ function updateCartItem
     style={{ backgroundColor: '#f8f9fa', borderRadius: '8px' }}
     >
     <img 
-    src={product.image && product.image.startsWith('http')
-      ? product.image
-      : `https://res.cloudinary.com/\( {import.meta.env.VITE_CLOUDINARY_CLOUD_NAME}/image/upload/v1/ \){product.image}`} 
+    src={item.product?.image?.url || item.product?.image} 
     alt="Product Image" 
     className="img-fluid"
     style={{ width: '80px', height: '80px', objectFit: 'cover', borderRadius: '8px' }}

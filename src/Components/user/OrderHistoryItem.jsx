@@ -9,9 +9,7 @@ const OrderHistoryItem = ({item}) => {
             <div className="row">
                 <div className="col-md-2">
                     <img 
-                    src={product.image && product.image.startsWith('http')
-      ? product.image
-      : `https://res.cloudinary.com/\( {import.meta.env.VITE_CLOUDINARY_CLOUD_NAME}/image/upload/v1/ \){product.image}`}
+                    src={item.product?.image?.url || item.product?.image}
                     alt="" 
                     className="img-fluid" 
                     style={{ borderRadius: '5px' }}/>
