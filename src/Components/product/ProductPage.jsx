@@ -106,7 +106,9 @@ function add_item() {
         <div className="container px-4 px-lg-5 my-5">
             <div className="row gx-4 gx-lg-5 align-items-center">
                 <div className="col-md-6">
-                    <img src={`${BASE_URL}${product.image}`} alt="" className="card-img-top mb-5 mb-md-0"/>
+                    <img src={product.image && product.image.startsWith('http')
+      ? product.image
+      : `https://res.cloudinary.com/\( {import.meta.env.VITE_CLOUDINARY_CLOUD_NAME}/image/upload/v1/ \){product.image}`} alt="" className="card-img-top mb-5 mb-md-0"/>
                 </div>
                 <div className="col-md-6">
                     <div className="small mb-1">SKU: BST-498</div>
